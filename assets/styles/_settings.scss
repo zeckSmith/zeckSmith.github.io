@@ -1,0 +1,82 @@
+
+// ----------- MY FONT --------
+@font-face {
+    font-family: "Merri";
+    src: url(../font/Merriweather-Light.ttf);
+}
+@font-face {
+    font-family: "Inter";
+    src: url(../font/Inter-ExtraBold.ttf);
+}
+
+
+// ------- START FOR SETTING ---------
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+@mixin title {
+    font-family: $font1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+html{
+    scroll-behavior: smooth;
+    // height: ;
+}
+
+
+body{
+    background: url(../img/bg.jpg) fixed center/cover;
+    text-align: center;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    &::before{
+        content: "";
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background: $black1;
+        animation: anime1 .4s ease forwards;
+        animation-delay: .15s;
+
+        @keyframes anime1 {
+            to{
+                opacity: 0;
+            }
+            
+        }
+
+
+    }
+}
+// 
+.btn{
+    background: none;
+    border: 2px solid $black1;
+    height: 45px;
+    width: 170px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    @include title;
+    transition: .2s;
+
+    &:hover{
+        transform: scale(1.05);
+    }
+
+}
+
+a, 
+a:visited{
+   color: $white1;
+//    border: ;
+   
+}

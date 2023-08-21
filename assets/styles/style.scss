@@ -1,0 +1,18 @@
+
+
+
+// -----color --------
+$font1: Inter, sans-serif;
+$font2: merri, serif;
+$black1: rgb(17, 17, 17);
+$white1:rgb(243,243,243);
+$grey1: rgb(209,209,209);
+$grey2: rgb(233,233,233);
+$grey3: rgb(205,205,205);
+
+// -----color --------
+@import "./settings";
+@import "./layout/header";
+@import "./layout/main";
+@import "./layout/footer";
+

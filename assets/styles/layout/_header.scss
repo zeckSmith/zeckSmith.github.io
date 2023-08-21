@@ -1,0 +1,105 @@
+
+
+header {
+    color: $white1;
+    position: relative;
+    min-height: 100vh;
+    // background: red;
+    
+    .header-container{
+        // position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        transform: translateY(45px);
+        opacity: 0;
+        animation: anime2 1.5s ease forwards;
+
+        @keyframes anime2 {
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+            
+        }
+
+        h1{
+            @include title;
+            letter-spacing: 6px;
+            font-size: 4rem;
+        }
+        p{
+            font-style: italic;
+            padding: 45px 0 85px;
+            width: 85%;
+        }
+        a{
+            border: 1px solid $white1;
+            padding: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: .6s ease;
+
+            &:hover{
+                background: #cccccc3f;
+                // backdrop-filter: blur(14px);
+            }
+        }
+
+    }
+
+    nav{
+        background: rgba(255, 255, 255, 0.205);
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 65px;
+        z-index: 100;
+
+        ul{
+            display: flex;
+            align-items: center;
+        }
+        .nav-left{
+            &:hover li:not(:hover){
+                background: none;
+                color: $white1;
+            }
+            li{
+                @include title;
+                padding: 0 15px;
+                font-size: .7rem;
+                height: 100%;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                
+                &:first-child{
+                    background: $white1;
+                    color: $black1;
+                }
+                &:hover{
+                    background: $white1;
+                    color: $black1;
+                }
+
+            }
+        }
+
+        .nav-rigth{
+            min-width: 100px;
+            width: 25%;
+            max-width: 300px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-around;
+            margin-right: 10px;
+            font-size: 1.7rem;
+        }
+        
+    }
+}

@@ -1,0 +1,349 @@
+@font-face {
+  font-family: "Merri";
+  src: url(../font/Merriweather-Light.ttf);
+}
+@font-face {
+  font-family: "Inter";
+  src: url(../font/Inter-ExtraBold.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(../img/bg.jpg) fixed center/cover;
+  text-align: center;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+body::before {
+  content: "";
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(17, 17, 17);
+  -webkit-animation: anime1 0.4s ease forwards;
+          animation: anime1 0.4s ease forwards;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+@-webkit-keyframes anime1 {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes anime1 {
+  to {
+    opacity: 0;
+  }
+}
+
+.btn {
+  background: none;
+  border: 2px solid rgb(17, 17, 17);
+  height: 45px;
+  width: 170px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  font-family: Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+a,
+a:visited {
+  color: rgb(243, 243, 243);
+}
+
+header {
+  color: rgb(243, 243, 243);
+  position: relative;
+  min-height: 100vh;
+}
+header .header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  -webkit-transform: translateY(45px);
+          transform: translateY(45px);
+  opacity: 0;
+  -webkit-animation: anime2 1.5s ease forwards;
+          animation: anime2 1.5s ease forwards;
+}
+@-webkit-keyframes anime2 {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes anime2 {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+header .header-container h1 {
+  font-family: Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+  font-size: 4rem;
+}
+header .header-container p {
+  font-style: italic;
+  padding: 45px 0 85px;
+  width: 85%;
+}
+header .header-container a {
+  border: 1px solid rgb(243, 243, 243);
+  padding: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+}
+header .header-container a:hover {
+  background: rgba(204, 204, 204, 0.2470588235);
+}
+header nav {
+  background: rgba(255, 255, 255, 0.205);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 65px;
+  z-index: 100;
+}
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+header nav .nav-left:hover li:not(:hover) {
+  background: none;
+  color: rgb(243, 243, 243);
+}
+header nav .nav-left li {
+  font-family: Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0 15px;
+  font-size: 0.7rem;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+header nav .nav-left li:first-child {
+  background: rgb(243, 243, 243);
+  color: rgb(17, 17, 17);
+}
+header nav .nav-left li:hover {
+  background: rgb(243, 243, 243);
+  color: rgb(17, 17, 17);
+}
+header nav .nav-rigth {
+  min-width: 100px;
+  width: 25%;
+  max-width: 300px;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-right: 10px;
+  font-size: 1.7rem;
+}
+
+main {
+  font-family: merri, serif;
+  max-width: 1300px;
+  margin: 0 auto 30px;
+  background: rgb(243, 243, 243);
+}
+main img {
+  width: 50%;
+}
+main .section1 {
+  width: 85%;
+  margin: 0 auto;
+}
+main .section1 span {
+  padding: 70px 0;
+  position: relative;
+  display: block;
+}
+main .section1 span::before, main .section1 span::after {
+  content: "";
+  position: absolute;
+  background: rgb(209, 209, 209);
+  height: 1px;
+  width: 37%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media screen and (max-width: 700px) {
+  main .section1 span::before, main .section1 span::after {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 400px) {
+  main .section1 span::before, main .section1 span::after {
+    width: 22%;
+  }
+}
+main .section1 span::before {
+  left: 0;
+}
+main .section1 span::after {
+  right: 0;
+}
+main .section1 h1 {
+  font-family: Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+main .section1 p {
+  width: 60%;
+  margin: 30px auto;
+  font-size: 0.8rem;
+  line-height: 30px;
+  font-style: italic;
+}
+main .section1 img {
+  width: 100%;
+  padding: 30px 0;
+}
+main .section1 .btn {
+  margin: 20px 0 100px;
+}
+main .section2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  border-top: 1px solid rgb(209, 209, 209);
+}
+main .section2 .left-part,
+main .section2 .rigth-part {
+  padding: 60px;
+}
+main .section2 img {
+  width: 100%;
+}
+main .section2 span {
+  font-size: 0.75rem;
+}
+main .section2 h2 {
+  font-family: Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+main .section2 p {
+  text-align: left;
+  line-height: 35px;
+  margin: 40px 0;
+}
+main .section2 .left-part {
+  border-right: 1px solid rgb(209, 209, 209);
+}
+
+footer {
+  background: rgb(233, 233, 233);
+  width: 100%;
+  display: grid;
+  margin: 0 auto 70px;
+  min-height: 65px;
+  grid-template-columns: 50% 50%;
+}
+footer form {
+  display: grid;
+  gap: 18px;
+  padding: 60px 50px;
+  border-right: 1px solid rgb(205, 205, 205);
+  grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+}
+footer form label {
+  text-align: left;
+  font-family: Inter, sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+footer form input[type=text],
+footer form input[type=email],
+footer form textarea {
+  background: none;
+  border: 1px solid #bbb;
+  resize: none;
+}
+footer form .submit-container {
+  text-align: left;
+}
+footer form .submit-container .btn {
+  border: 1px solid #bbb;
+}
+footer .infos-contact {
+  padding: 60px 50px;
+  display: grid;
+  gap: 18px;
+}
+footer .infos-contact div {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+footer .infos-contact div ul {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,62 @@
+
+footer{
+    background: $grey2;
+    width: 100%;
+    display: grid;
+    margin: 0 auto 70px;
+    min-height: 65px;
+    grid-template-columns: 50% 50%;
+
+    form{
+
+        display: grid;
+        gap: 18px;
+        padding: 60px 50px;
+        border-right: 1px solid $grey3;
+        grid-template-rows: 18px 45px 18px 45px 18px 200px 1fr;
+        label{
+            text-align: left;
+            @include title;
+            font-size: .8rem;
+            // color: $grey3;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea
+         {
+            background: none;
+            border: 1px solid #bbb;
+            resize: none;
+            
+        }
+        .submit-container{
+            text-align: left;
+
+            .btn{
+                border: 1px solid #bbb;
+
+            }
+        }
+
+    }
+
+    .infos-contact{
+        padding: 60px 50px;
+        display: grid;
+        gap: 18px;
+        // grid-template-columns: ;
+        div{
+            display: grid;
+            grid-template-columns: 30% 70%;
+            align-items: center;
+            text-align: left;
+
+            ul{
+                width: 80%;
+                display: flex;
+                justify-content: space-around;
+            }
+        }
+
+    }
+}
