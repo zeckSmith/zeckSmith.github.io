@@ -347,3 +347,9 @@ footer .infos-contact div ul {
   -ms-flex-pack: distribute;
       justify-content: space-around;
 }/*# sourceMappingURL=style.css.map */
+form input{
+  padding: 0 10px ;
+}
+form textarea{
+  padding: 15px;
+}
